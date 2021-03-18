@@ -1,0 +1,4 @@
+MUSICIEN(#id_mus,nom,prenom,instrument,style_musical,estLive,estDemat,estDispo,visuel)
+CONTENU_MUSICIEN(#id_con,url,id_mus#)
+GROUPE(#id_gro,nom_gro,style_musical,estLive,estDemat,visuel)
+APPARTIENTA(#id_mus#,#id_gro#)

@@ -1,0 +1,39 @@
+//DE CE MCD FORMAT TEXTE A UN RENDU VISUEL
+// --------------------------------------
+// Y MCD FORMAT TEXTE?
+// RAPIDE A FAIRE
+// ECHANGE FACILE
+// MARRE DE LA BUREAUTIQUE
+// FACILE A TRANSFORMER
+// Y REND VISUEL MCD?
+// SYNTHETIQUE QD NBR ENTITES
+// RENDUS SCOLAIRES
+//1.lister les entites avec leurs pptes
+//2.lister les liens entites associations avec les cardinalites
+//3.si pptes attachées à une association, la mettre entre parent.
+//4.passer à la moulinette MCDTXT2GRAPHVIZ.py
+//5.copier le fichier resultant en point dot dans n importe quelle moulinette graphviz en ligne
+//6.récuperer l image et l envoyer là ou elle le doit
+
+CLIENTS(NumClient,Nom,Prenom,DteNaiss,rue,CdePoste,Ville)
+PRODUITS(NumPdt,Design,PxUnit)
+FOURNISSEUR(NumFou,RaisSoc)
+
+CLIENTS-(1,n)-COMMANDENT(DateCmd,QtéCmd)-(1,n)-PRODUITS
+FOURNISSEUR-(1,n)-FOURNIT-(1,1)-PRODUITS
+
+
+
+
+
+MUSICIEN(#id_mus, nom, prenom, instrument, style_musical, estLive, estDemat, estDispo, visuel)
+CONTENU_MUSICIEN(#id_con,url)
+GROUPE(#id_gro, nom,style_musical, estLive, estDemat, visuel)
+
+
+MUSICIEN-(O,n)-APPARTIENTA-(1,n)-GROUPE
+MUSICIEN-(O,n)-POSSEDE-(1,1)-CONTENU_MUSICIEN
+
+
+
+
